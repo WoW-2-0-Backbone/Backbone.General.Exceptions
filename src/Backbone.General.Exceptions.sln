@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.General.Exceptions.Abstractions", "Backbone.General.Exceptions.Abstractions\Backbone.General.Exceptions.Abstractions.csproj", "{C887F6DA-9266-433F-BDC8-E86CB5D6955D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.General.Exceptions.Catching", "Backbone.General.Exceptions.Catching\Backbone.General.Exceptions.Catching.csproj", "{A872A1E5-D224-4245-9A78-F86C2CAF7624}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C887F6DA-9266-433F-BDC8-E86CB5D6955D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C887F6DA-9266-433F-BDC8-E86CB5D6955D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C887F6DA-9266-433F-BDC8-E86CB5D6955D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A872A1E5-D224-4245-9A78-F86C2CAF7624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A872A1E5-D224-4245-9A78-F86C2CAF7624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A872A1E5-D224-4245-9A78-F86C2CAF7624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A872A1E5-D224-4245-9A78-F86C2CAF7624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
