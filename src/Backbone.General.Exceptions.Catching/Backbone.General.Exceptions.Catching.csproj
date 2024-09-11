@@ -5,16 +5,16 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.General.Exceptions.Abstractions</Title>
-        <PackageId>WoW2.Backbone.General.Exceptions.Abstractions</PackageId>
-        <Description>Abstractions for handling exceptions</Description>
+        <Title>WoW2.Backbone.General.Exceptions.Catching</Title>
+        <PackageId>WoW2.Backbone.General.Exceptions.Catching</PackageId>
+        <Description>Provides utilities for catching and handling exceptions.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>exceptions, abstractions, general</PackageTags>
-        <Version>8.0.0-alpha.2</Version>
+        <PackageTags>exceptions, catching, utilities</PackageTags>
+        <Version>8.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Exceptions.Abstractions</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Exceptions.Abstractions</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Exceptions.Catching</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Exceptions.Catching</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageIcon>wow2.png</PackageIcon>
     </PropertyGroup>
