@@ -7,10 +7,10 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Title>WoW2.Backbone.General.Exceptions.Abstractions</Title>
         <PackageId>WoW2.Backbone.General.Exceptions.Abstractions</PackageId>
-        <Description>Abstractions for handling exceptions in Backbone projects</Description>
+        <Description>Abstractions for handling exceptions</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>exceptions, abstractions, general</PackageTags>
-        <Version>8.0.0-alpha.1</Version>
+        <Version>8.0.0-alpha.2</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Exceptions.Abstractions</PackageProjectUrl>
