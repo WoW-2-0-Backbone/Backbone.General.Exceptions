@@ -5,27 +5,61 @@ namespace Backbone.General.Exceptions.Abstractions.Exceptions.General;
 /// <summary>
 /// Represents general application exception
 /// </summary>
-public abstract class AppException : Exception
+public class AppException : Exception, IAppException
 {
-    /// <inheritdoc />
-    public AppException(string message) : base(message)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AppException"/> class with a specified error message.
+    /// </summary>
+    /// <param name="message">The message that describes the error.</param>
+    /// <param name="statusCode">Optional HTTP status code for this exception.</param>
+    /// <param name="meta">Optional metadata for additional information.</param>
+    public AppException(
+        string message,
+        HttpStatusCode statusCode = HttpStatusCode.InternalServerError,
+        Dictionary<string, string>? meta = null)
+        : base(message)
     {
-    }
-
-    /// <inheritdoc />
-    public AppException(string message, Exception inner) : base(message, inner)
-    {
-    }
-
-    /// <inheritdoc />
-    public AppException(Exception inner) : base(inner.Message, inner)
-    {
+        StatusCode = statusCode;
+        Meta = meta ?? new Dictionary<string, string>();
     }
 
     /// <summary>
-    /// 
+    /// Initializes a new instance of the <see cref="AppException"/> class with a specified error message and inner exception.
     /// </summary>
-    public virtual HttpStatusCode StatusCode => InnerException is AppException appException
-        ? appException.StatusCode
-        : HttpStatusCode.InternalServerError;
+    /// <param name="message">The message that describes the error.</param>
+    /// <param name="innerException">The exception that caused the current exception.</param>
+    /// <param name="statusCode">Optional HTTP status code for this exception.</param>
+    /// <param name="meta">Optional metadata for additional information.</param>
+    public AppException(
+        string message,
+        Exception innerException,
+        HttpStatusCode statusCode = HttpStatusCode.InternalServerError,
+        Dictionary<string, string>? meta = null)
+        : base(message, innerException)
+    {
+        StatusCode = innerException is AppException appException ? appException.StatusCode : statusCode;
+        Meta = meta ?? new Dictionary<string, string>();
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AppException"/> class with an inner exception.
+    /// </summary>
+    /// <param name="inner">The exception that caused the current exception.</param>
+    /// <param name="statusCode">Optional HTTP status code for this exception.</param>
+    /// <param name="meta">Optional metadata for additional information.</param>
+    public AppException(
+        Exception inner,
+        HttpStatusCode statusCode = HttpStatusCode.InternalServerError,
+        Dictionary<string, string>? meta = null)
+        : base(inner.Message, inner)
+    {
+        StatusCode = statusCode;
+        Meta = meta ?? new Dictionary<string, string>();
+    }
+
+    /// <inheritdoc />
+    public HttpStatusCode StatusCode { get; init; }
+    
+    /// <inheritdoc />
+    public Dictionary<string, string> Meta { get; init; }
 }
